@@ -1,1 +1,9 @@
 .env
+
+# Ignore all .tf files in the working directory
+terraform/
+!*.tf
+
+# Also don't ignore .gitignore and .env
+!.gitignore
+!.env
