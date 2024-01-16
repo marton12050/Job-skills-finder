@@ -34,3 +34,12 @@ output "redshift_database" {
   value       = aws_redshift_cluster.jsf_cluster.database_name
 }
 
+output "kafka_instance_public_ip" {
+  description = "Public IP address of the Kafka EC2 instance"
+  value       = var.create_kafka_instance ? aws_instance.kafka_instance[0].public_ip : ""
+}
+
+output "spark_instance_public_ip" {
+  description = "Public IP address of the Spark EC2 instance"
+  value       = var.create_spark_instance ? aws_instance.spark_instance[0].public_ip : ""
+}

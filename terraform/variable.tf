@@ -19,3 +19,15 @@ variable "contact_email" {
   description = "Email address to send budget notifications to"
   type        = string
 }
+
+variable "create_kafka_instance" {
+  description = "Whether to create Kafka EC2 instance"
+  type        = bool
+  default     = false
+}
+
+variable "create_spark_instance" {
+  description = "Whether to create Spark EC2 instance"
+  type        = bool
+  default     = false
+}
