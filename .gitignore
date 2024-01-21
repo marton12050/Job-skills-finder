@@ -7,3 +7,5 @@ terraform/
 # Also don't ignore .gitignore and .env
 !.gitignore
 !.env
+
+*/__pycache__/*
