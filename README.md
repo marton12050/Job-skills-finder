@@ -23,6 +23,15 @@ The first image provides a general overview of the collected job posts, featurin
 ![Alt text](assets/Skill_specific.png)
 The second image showcases the truly interesting findings, as the whole purpose of the analysis was to find these out. The data was extracted based on whether the given name of the technology was mentioned in the job description. The first chart displays the most popular programming languages, with Python, SQL, and Scala leading, followed by Java in fourth place. In terms of Frameworks/Tools, Kubernetes was the most popular skill, alongside Docker and Terraform. On the cloud provider front, AWS is in the lead, followed by Microsoft Azure and Google Cloud. Another interesting thing is regarding OS-specific skills, unsurprisingly, Linux is the most sought after, but Windows also has a presence. Notably, MacOS was not present in the dataset.
 
+## Future plans
+
+Here, I present a few possible upgrades to this project:
+
+- [ ]  We can add more data sources if we have access to the required API to retrieve the given data. Since Kafka is used, the process becomes much easier as it only needs to be sent to the same place as the other sources
+- [ ] More advanced processing of the data, for example, better Keyword Extraction. This is important because there can be technology names that are written differently, yet they still refer to the same tool. One easier approach is to use LLM, like the ChatGPT
+- [ ] Make deployment easier. For instance, utilize a Makefile, generate an Ansible inventory automatically with Terraform, and set up the EC2 instances. Deploy the Spark streaming and possibly deploy Airflow to the cloud as well.
+
+
 ## Requirements
 
 1. Configure AWS account through [AWS CLI](https://aws.amazon.com/cli/). [Reqruired for Terraform]
