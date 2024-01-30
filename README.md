@@ -9,7 +9,7 @@ For this project, I used one of the most popular online job posting websites,  L
 
 The processing step was done by Apache Spark to divide the runtime to  multiple different workloads, if necessary. The processed data is then stored in a data warehouse, which is an AWS Redshift. For data analysis, Power BI was used to obtain the needed information for the given problem. Detailed results are below. Airflow was used to manage and schedule the workflow from the data source to the data warehouse.
 
-For non-AWS services the deployment can be either on the AWS or local environment. The AWS version uses Terraform for deploying infrastructure as code and Ansible for setting up and configuring the deployed infrastructure. The local version utilizes Docker to containerize Kafka and Spark. GitHub Actions(CI/CD) helped in continuous integration and testing with pytest. It is also possible to implement continuous deployment to the AWS.
+For non-AWS services the deployment can be either on the AWS or local environment. The AWS version uses Terraform for deploying infrastructure as code and Ansible for setting up and configuring the deployed infrastructure. The local version utilizes Docker to containerize Kafka and Spark. It is also possible to implement continuous deployment to the AWS with GitHub Actions(CI/CD) and continuous integration with some kind of testing framework like pytest.
 
 *The scraper are filtered to Budapest and each day only the last 24 hours posted jobs are collected.*
 
